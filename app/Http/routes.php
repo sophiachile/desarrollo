@@ -18,8 +18,6 @@ Route::get('muro', 'ProductController@muro');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('prueba', 'ProductController@prueba');
-
 Route::get('home', 'HomeController@index');
 
 Route::get('welcome', function () {
