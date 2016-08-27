@@ -20,6 +20,10 @@ Route::get('home', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('welcome', function () {
+return view('welcome', compact('welcome'));
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
