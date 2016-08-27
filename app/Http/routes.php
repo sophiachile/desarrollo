@@ -29,3 +29,4 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+//Hola Jaime y Carlos!!!
