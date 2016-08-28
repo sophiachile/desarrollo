@@ -23,7 +23,7 @@ class CreateUsuariosTable extends Migration {
                         $table->date('fecha_nacimiento');
                         $table->integer('edad');
                         $table->string('estado',50);
-                        $table->date('fecha_registro');
+                        $table->datetime('fecha_registro');
                         $table->date('fecha_expiracion');
                         $table->integer('reintentos');
                         $table->string('pregunta_secreta',250);                                                                   

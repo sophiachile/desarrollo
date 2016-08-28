@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,22 +12,33 @@ use Illuminate\Database\Seeder;
 class AdministradorTableSeeder extends Seeder{
     public function run()
     {
-        \DB::table('usuarios')->insert(array(
+        
+        //agregamos usuario administrador
+        $id = \DB::table('usuarios')->insertGetId(array(
             'nombre'            => 'Admin',
             'apellido'          => 'istrador',
             'email'             => 'carlos.gonzalez.gavilan@gmail.com',
             'password'          => \Hash::make('secret'),
-            'fecha_nacimiento'  => '19850203',
+            'fecha_nacimiento'  => '19850302',
             'edad'              => 31,
-            'fecha_registro'    => date('aaaammdd'),
-            'fecha_expiracion'  => date('aaaammdd') + 360,
+            'estado'            => 'ACTIVO',
+            'fecha_registro'    => date('Y-m-d'),
+            'fecha_expiracion'  => date ( 'Y-m-j' ,strtotime( '+365 day' , strtotime ( date('Y-m-j') ) )),
             'reintentos'        => 0,
-            'pregunta_secreta' => 'Hola como estas',
+            'pregunta_secreta'  => 'Hola como estas',
             'respuesta_secreta' => 'bien y tu',
             'pais'              => 'Chile'
         ));
         
+        //agregamos relacion usuario perfil administrador
         
+
+        \DB::table('usuario_perfils')->insert(array(
+            'id_usuario'        => $id,
+            'id_perfil'         => 1 //codigo_perfil administrador
+        ));
+          
+         
     }
             
 }

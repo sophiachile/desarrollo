@@ -13,9 +13,21 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Model::unguard();
-
-                 $this->call('AdministradorTableSeeder');
-		 $this->call('UsuariosTableSeeder');
+                
+                /* CGG:
+                 cuando se agrega una nueva class aca se debe correr el comando
+                 composer dump-autoload 
+                 o sino no toma las clases
+                */
+                
+                //perfiles
+                $this->call('PerfilsTableSeeder');
+                //usuario administrador
+                $this->call('AdministradorTableSeeder');
+		//usuarios random
+                $this->call('UsuariosTableSeeder');
+                 
+                 
 	}
 
 }
