@@ -62,3 +62,7 @@ header .btn-header-login{
     color: black;
     border-bottom: 0 solid transparent;
 }
+
+.completar-registro {
+	background-color: black;
+}
