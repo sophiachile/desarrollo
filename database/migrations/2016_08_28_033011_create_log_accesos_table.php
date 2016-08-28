@@ -16,7 +16,7 @@ class CreateLogAccesosTable extends Migration {
 		{
 			$table->increments('id');
 			$table->timestamps();
-                        $table->integer('id_usuario');
+                        $table->integer('id_usuario')->unsigned();
                         $table->datetime('fecha_y_hora_acceso');
                         $table->string('descripcion_accion');
                         $table->foreign('id_usuario')->references('id')->on('usuarios');

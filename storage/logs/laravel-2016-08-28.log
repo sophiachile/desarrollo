@@ -1,0 +1,182 @@
+[2016-08-28 04:40:56] local.ERROR: InvalidArgumentException: Database [seguridad_desarrollo] not configured. in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php:246
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(157): Illuminate\Database\DatabaseManager->getConfig('seguridad_desar...')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(65): Illuminate\Database\DatabaseManager->makeConnection('seguridad_desar...')
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(167): Illuminate\Database\DatabaseManager->connection('seguridad_desar...')
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(135): Illuminate\Database\Migrations\DatabaseMigrationRepository->getConnection()
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(398): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(101): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(54): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2016-08-28 04:41:52] local.ERROR: PDOException: SQLSTATE[HY000]: General error: 1005 Can't create table `seguridad_desarrollo`.`#sql-8e4_14e` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:362
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(362): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(616): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `lo...', Array)
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('alter table `lo...', Array, Object(Closure))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('alter table `lo...', Array, Object(Closure))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(63): Illuminate\Database\Connection->statement('alter table `lo...')
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(188): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(131): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(213): Illuminate\Database\Schema\Builder->create('log_accesos', Object(Closure))
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\migrations\2016_08_28_033011_create_log_accesos_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(135): CreateLogAccesosTable->up()
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(111): Illuminate\Database\Migrations\Migrator->runUp('2016_08_28_0330...', 1, false)
+#11 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(82): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(73): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', false)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1005 Can't create table `seguridad_desarrollo`.`#sql-8e4_14e` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `log_accesos` add constraint log_accesos_id_usuario_foreign foreign key (`id_usuario`) references `usuarios` (`id`)) in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('alter table `lo...', Array, Object(Closure))
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('alter table `lo...', Array, Object(Closure))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(63): Illuminate\Database\Connection->statement('alter table `lo...')
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(188): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(131): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(213): Illuminate\Database\Schema\Builder->create('log_accesos', Object(Closure))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\migrations\2016_08_28_033011_create_log_accesos_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(135): CreateLogAccesosTable->up()
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(111): Illuminate\Database\Migrations\Migrator->runUp('2016_08_28_0330...', 1, false)
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(82): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(73): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', false)
+#11 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-08-28 04:48:37] local.ERROR: RuntimeException: Too many arguments. in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\ArgvInput.php:181
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\ArgvInput.php(90): Symfony\Component\Console\Input\ArgvInput->parseArgument('2016_08_28_0330...')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\Input.php(61): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(229): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 {main}  
+[2016-08-28 04:49:49] local.ERROR: InvalidArgumentException: Command "migration" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:install
+    migrate:rollback
+    migrate:reset
+    migrate:refresh
+    migrate:status
+    make:migration in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('migration')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-08-28 04:51:43] local.ERROR: RuntimeException: The "--database" option does not exist. in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\ArgvInput.php:213
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\ArgvInput.php(152): Symfony\Component\Console\Input\ArgvInput->addLongOption('database', 'mysql_seguridad')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseLongOption('--database=mysq...')
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Input\Input.php(61): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(229): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 {main}  
+[2016-08-28 04:55:37] local.ERROR: InvalidArgumentException: Command "migration" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:install
+    migrate:rollback
+    migrate:reset
+    migrate:refresh
+    migrate:status
+    make:migration in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\HelpCommand.php(76): Symfony\Component\Console\Application->find('migration')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Symfony\Component\Console\Command\HelpCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Symfony\Component\Console\Command\HelpCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2016-08-28 04:59:56] local.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'log_accesos' already exists in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:362
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(362): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(616): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `l...', Array)
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('create table `l...', Array, Object(Closure))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('create table `l...', Array, Object(Closure))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(63): Illuminate\Database\Connection->statement('create table `l...')
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(188): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(131): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(213): Illuminate\Database\Schema\Builder->create('log_accesos', Object(Closure))
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\migrations\2016_08_28_033011_create_log_accesos_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(135): CreateLogAccesosTable->up()
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(111): Illuminate\Database\Migrations\Migrator->runUp('2016_08_28_0330...', 2, false)
+#11 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(82): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(73): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', false)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'log_accesos' already exists (SQL: create table `log_accesos` (`id` int unsigned not null auto_increment primary key, `created_at` timestamp default 0 not null, `updated_at` timestamp default 0 not null, `id_usuario` int unsigned not null, `fecha_y_hora_acceso` datetime not null, `descripcion_accion` varchar(255) not null) default character set utf8 collate utf8_unicode_ci) in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('create table `l...', Array, Object(Closure))
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('create table `l...', Array, Object(Closure))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php(63): Illuminate\Database\Connection->statement('create table `l...')
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(188): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php(131): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(213): Illuminate\Database\Schema\Builder->create('log_accesos', Object(Closure))
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\migrations\2016_08_28_033011_create_log_accesos_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(135): CreateLogAccesosTable->up()
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(111): Illuminate\Database\Migrations\Migrator->runUp('2016_08_28_0330...', 2, false)
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(82): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, false)
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(73): Illuminate\Database\Migrations\Migrator->run('C:\\xampp\\htdocs...', false)
+#11 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
