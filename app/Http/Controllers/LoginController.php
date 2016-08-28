@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 use DB;
-class ProductController extends Controller {
+class LoginController extends Controller {
 
 
 	public function login()

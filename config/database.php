@@ -63,6 +63,18 @@ return [
 			'prefix'    => '',
 			'strict'    => false,
 		],
+            
+            	'mysql_seguridad' => [
+			'driver'    => 'mysql',
+			'host'      => env('DB_HOST_SEGURIDAD', 'localhost'),
+			'database'  => env('DB_DATABASE_SEGURIDAD', 'forge'),
+			'username'  => env('DB_USERNAME_SEGURIDAD', 'forge'),
+			'password'  => env('DB_PASSWORD_SEGURIDAD', ''),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
 
 		'pgsql' => [
 			'driver'   => 'pgsql',

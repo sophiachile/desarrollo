@@ -241,10 +241,16 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
     );
 
     public static $classMap = array (
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
-        'CreateUsuaiosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_25_172038_create_usuaios_table.php',
-        'CreateUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_25_172103_create_usuarios_table.php',
+        'CreateLogAccesosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_033011_create_log_accesos_table.php',
+        'CreateMenusTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031514_create_menus_table.php',
+        'CreateModulosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031406_create_modulos_table.php',
+        'CreatePerfilModulosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031601_create_perfil_modulos_table.php',
+        'CreatePerfilsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031344_create_perfils_table.php',
+        'CreateRolsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031440_create_rols_table.php',
+        'CreateRolUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031634_create_rol_usuarios_table.php',
+        'CreateUsuarioPasswordHistoricosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_032204_create_usuario_password_historicos_table.php',
+        'CreateUsuarioPerfilsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031542_create_usuario_perfils_table.php',
+        'CreateUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031115_create_usuarios_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

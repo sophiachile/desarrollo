@@ -10,7 +10,7 @@
 
 Route::get('productindex','ProductController@index');
 
-Route::get('/', 'ProductController@login');
+Route::get('/', 'LoginController@login');
 
 Route::get('terminos', 'ProductController@login_terminosUso');
 

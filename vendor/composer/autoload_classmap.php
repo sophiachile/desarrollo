@@ -6,10 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
-    'CreateUsuaiosTable' => $baseDir . '/database/migrations/2016_08_25_172038_create_usuaios_table.php',
-    'CreateUsuariosTable' => $baseDir . '/database/migrations/2016_08_25_172103_create_usuarios_table.php',
+    'CreateLogAccesosTable' => $baseDir . '/database/migrations/2016_08_28_033011_create_log_accesos_table.php',
+    'CreateMenusTable' => $baseDir . '/database/migrations/2016_08_28_031514_create_menus_table.php',
+    'CreateModulosTable' => $baseDir . '/database/migrations/2016_08_28_031406_create_modulos_table.php',
+    'CreatePerfilModulosTable' => $baseDir . '/database/migrations/2016_08_28_031601_create_perfil_modulos_table.php',
+    'CreatePerfilsTable' => $baseDir . '/database/migrations/2016_08_28_031344_create_perfils_table.php',
+    'CreateRolsTable' => $baseDir . '/database/migrations/2016_08_28_031440_create_rols_table.php',
+    'CreateRolUsuariosTable' => $baseDir . '/database/migrations/2016_08_28_031634_create_rol_usuarios_table.php',
+    'CreateUsuarioPasswordHistoricosTable' => $baseDir . '/database/migrations/2016_08_28_032204_create_usuario_password_historicos_table.php',
+    'CreateUsuarioPerfilsTable' => $baseDir . '/database/migrations/2016_08_28_031542_create_usuario_perfils_table.php',
+    'CreateUsuariosTable' => $baseDir . '/database/migrations/2016_08_28_031115_create_usuarios_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
