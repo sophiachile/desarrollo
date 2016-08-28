@@ -180,3 +180,84 @@ Stack trace:
 #19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #20 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #21 {main}  
+[2016-08-28 06:17:11] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'Iluminate\Database\Seeder' not found in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\AdministradorTableSeeder.php:11
+Stack trace:
+#0 {main}  
+[2016-08-28 06:22:45] local.ERROR: InvalidArgumentException: There are no commands defined in the "make:" namespace.
+
+Did you mean this?
+    make in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php:501
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(535): Symfony\Component\Console\Application->findNamespace('make:')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('make::seeder')
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2016-08-28 06:24:12] local.ERROR: InvalidArgumentException: Command "make:seeder" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:command
+    make:console
+    make:event
+    make:model
+    make:provider
+    make:request
+    make:migration
+    make:controller
+    make:middleware in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php:549
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(192): Symfony\Component\Console\Application->find('make:seeder')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-08-28 06:25:28] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'Iluminate\Database\Seeder' not found in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\AdministradorTableSeeder.php:11
+Stack trace:
+#0 {main}  
+[2016-08-28 06:27:17] local.ERROR: PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pregunta_secreata' in 'field list' in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:362
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(362): PDO->prepare('insert into `us...')
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(616): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `us...', Array)
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(320): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1709): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\AdministradorTableSeeder.php(26): Illuminate\Database\Query\Builder->insert(Array)
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(40): AdministradorTableSeeder->run()
+#8 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\DatabaseSeeder.php(17): Illuminate\Database\Seeder->call('AdministradorTa...')
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\SeedCommand.php(57): DatabaseSeeder->run()
+#10 [internal function]: Illuminate\Database\Console\SeedCommand->fire()
+#11 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#13 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pregunta_secreata' in 'field list' (SQL: insert into `usuarios` (`nombre`, `apellido`, `email`, `password`, `fecha_nacimiento`, `edad`, `fecha_registro`, `fecha_expiracion`, `reintentos`, `pregunta_secreata`, `respuesta_secreta`, `pais`) values (Admin, istrador, carlos.gonzalez.gavilan@gmail.com, y$WS3H1Ridn3EvERkj/TV7aeaM5DqEl50nWAsBWZPUZLdGLEwKdO922, 19850203, 31, amamamam08082828, 360, 0, Hola como estas, bien y tu, Chile)) in C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(580): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(363): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Connection.php(320): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1709): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\AdministradorTableSeeder.php(26): Illuminate\Database\Query\Builder->insert(Array)
+#5 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(40): AdministradorTableSeeder->run()
+#6 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\database\seeds\DatabaseSeeder.php(17): Illuminate\Database\Seeder->call('AdministradorTa...')
+#7 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Database\Console\SeedCommand.php(57): DatabaseSeeder->run()
+#8 [internal function]: Illuminate\Database\Console\SeedCommand->fire()
+#9 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Container\Container.php(526): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(115): Illuminate\Container\Container->call(Array)
+#11 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(257): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Console\Command.php(101): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(874): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\symfony\console\Symfony\Component\Console\Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\sophia_desarrollo\desarrollo.git\trunk\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  
