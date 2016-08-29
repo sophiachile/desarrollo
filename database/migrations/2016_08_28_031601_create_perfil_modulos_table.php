@@ -12,7 +12,7 @@ class CreatePerfilModulosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('perfil_modulos', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('perfil_modulos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

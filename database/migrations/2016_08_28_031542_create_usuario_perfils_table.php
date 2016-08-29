@@ -12,7 +12,7 @@ class CreateUsuarioPerfilsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('usuario_perfils', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('usuario_perfils', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

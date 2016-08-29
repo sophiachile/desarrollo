@@ -12,7 +12,7 @@ class CreateUsuarioPasswordHistoricosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('usuario_password_historicos', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('usuario_password_historicos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

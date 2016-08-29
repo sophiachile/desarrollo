@@ -12,7 +12,7 @@ class CreateRolUsuariosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('rol_usuarios', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('rol_usuarios', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

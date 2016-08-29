@@ -12,7 +12,7 @@ class CreateLogAccesosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('log_accesos', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('log_accesos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();

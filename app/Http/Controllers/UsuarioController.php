@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 
 use Sophia\Http\Requests;
 
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+
 class UsuarioController extends Controller
 {
 
@@ -13,6 +17,8 @@ class UsuarioController extends Controller
 	}
 	public function store(Request $request)
 	{
+            
+                            
 		\Sophia\Usuario::create([
 			'nombre' => $request['nombre'],
 			'apellido' => $request['apellido'],
@@ -20,7 +26,8 @@ class UsuarioController extends Controller
 			//'fecha_nacimiento' => $request['fecha_nacimiento'],
 			'password' => bcrypt($request["password"]),
 			]);
-		return "Usuario Registrado";
+                
+                return "Usuario Registrado";
 
 	}
 }

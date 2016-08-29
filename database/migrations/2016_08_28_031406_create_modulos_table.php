@@ -12,7 +12,7 @@ class CreateModulosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('modulos', function(Blueprint $table)
+		Schema::connection('mysql_seguridad')->create('modulos', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();
