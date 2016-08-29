@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace Sophia\Commands;
 
 abstract class Command {
 

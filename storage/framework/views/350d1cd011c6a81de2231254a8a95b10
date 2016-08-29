@@ -1,5 +1,4 @@
-@extends('layout.masterLogin')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <article class="container">
 		<div class="row">
 			<div class="col-sm-4">
@@ -21,7 +20,8 @@
 				
 				<h3><i class="fa fa-shield"></i> Regístrate</h3>
 			  	<hr>
-			  	{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
+			  	<?php echo Form::open(['route'=>'usuario.store', 'method'=>'POST']); ?>
+
 				<div class="form-group">
 				  <label class="control-label" for="">Nombre</label>
 				  <input type="text" class="form-control" name="nombre" placeholder="Nombre">
@@ -155,7 +155,8 @@
 				</div>	 
 
 				</div>
-				{!!Form::close()!!}
+				<?php echo Form::close(); ?>
+
 			</div>
 
 			</div>
@@ -166,4 +167,5 @@
 
 
 
-@stop()
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.masterLogin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -64,7 +64,7 @@ return [
 			'strict'    => false,
 		],
             
-            	'mysql_seguridad' => [
+        'mysql_seguridad' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST_SEGURIDAD', 'localhost'),
 			'database'  => env('DB_DATABASE_SEGURIDAD', 'forge'),

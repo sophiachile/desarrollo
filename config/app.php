@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Santiago',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -139,11 +139,14 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
-		'App\Providers\AppServiceProvider',
-		'App\Providers\BusServiceProvider',
-		'App\Providers\ConfigServiceProvider',
-		'App\Providers\EventServiceProvider',
-		'App\Providers\RouteServiceProvider',
+		'Sophia\Providers\AppServiceProvider',
+		'Sophia\Providers\BusServiceProvider',
+		'Sophia\Providers\ConfigServiceProvider',
+		'Sophia\Providers\EventServiceProvider',
+		'Sophia\Providers\RouteServiceProvider',
+
+
+		'Collective\Html\HtmlServiceProvider',
 
 	],
 
@@ -192,7 +195,8 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-
+      	'Form' 		=> 'Collective\Html\FormFacade',
+      	'Html' 		=> 'Collective\Html\HtmlFacade',
 	],
 
 ];

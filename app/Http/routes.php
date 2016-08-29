@@ -8,13 +8,13 @@
 |prueba de modificacion de archivo
 */
 
-Route::get('productindex','ProductController@index');
+Route::get('productindex','LoginController@index');
 
 Route::get('/', 'LoginController@login');
 
-Route::get('terminos', 'ProductController@login_terminosUso');
+Route::get('terminos', 'LoginController@login_terminosUso');
 
-Route::get('muro', 'ProductController@muro');
+Route::get('muro', 'LoginController@muro');
 
 Route::get('home', 'HomeController@index');
 
@@ -28,5 +28,8 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::resource('usuario', 'UsuarioController');
+
 
 //Hola Jaime y Carlos!!!

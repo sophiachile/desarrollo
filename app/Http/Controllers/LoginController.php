@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Sophia\Http\Controllers;
 use DB;
 class LoginController extends Controller {
 
@@ -14,8 +14,7 @@ class LoginController extends Controller {
 
 	public function muro()
 	{
-        $result = DB::table('prueba')->get();
-		return view('product.muro')->with('data',$result);
+		return view('product.muro');
 	}
 
 

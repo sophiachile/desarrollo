@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace Sophia;
 
 use Illuminate\Database\Eloquent\Model;
 

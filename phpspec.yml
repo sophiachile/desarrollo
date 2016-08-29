@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Sophia
+        psr4_prefix: Sophia
         src_path: app
