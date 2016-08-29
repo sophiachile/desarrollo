@@ -17,6 +17,7 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         '65fec9ebcfbb3cbb4fd0d519687aea01' => __DIR__ . '/..' . '/danielstjules/stringy/src/Create.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -41,6 +42,7 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'SuperClosure\\' => 13,
             'Stringy\\' => 8,
+            'Sophia\\' => 7,
         ),
         'M' => 
         array (
@@ -64,12 +66,9 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         ),
         'C' => 
         array (
+            'Collective\\Html\\' => 16,
             'ClassPreloader\\' => 15,
             'Carbon\\' => 7,
-        ),
-        'A' => 
-        array (
-            'App\\' => 4,
         ),
     );
 
@@ -116,6 +115,10 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         array (
             0 => __DIR__ . '/..' . '/danielstjules/stringy/src',
         ),
+        'Sophia\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -136,6 +139,10 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'ClassPreloader\\' => 
         array (
             0 => __DIR__ . '/..' . '/classpreloader/classpreloader/src',
@@ -143,10 +150,6 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
