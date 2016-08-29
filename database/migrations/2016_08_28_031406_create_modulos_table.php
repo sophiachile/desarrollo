@@ -18,6 +18,8 @@ class CreateModulosTable extends Migration {
 			$table->timestamps();
                         $table->string('codigo_modulo',20);
                         $table->string('descripcion_modulo',50);
+                        $table->string('estado_modulo',20);
+                        
 		});
 	}
 

@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder {
                 $this->call('AdministradorTableSeeder');
 		//usuarios random
                 $this->call('UsuariosTableSeeder');
-                 
+                //modulos
+                $this->call('ModulosTableSeeder');
                  
 	}
 

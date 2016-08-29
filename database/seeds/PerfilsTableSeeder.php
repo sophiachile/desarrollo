@@ -22,13 +22,15 @@ class PerfilsTableSeeder extends Seeder {
                 //perfil administrador
                 \DB::table('perfils')->insert(array(
                     'codigo_perfil'         => 'ADM',
-                    'descripcion_perfil'    => 'administrador'
+                    'descripcion_perfil'    => 'administrador',
+                    'estado_perfil'         => 'ACTIVO'
                 ));
                 
                 //perfil usuario
                 \DB::table('perfils')->insert(array(
                     'codigo_perfil'         => 'USR',
-                    'descripcion_perfil'    => 'Usuario'
+                    'descripcion_perfil'    => 'Usuario',
+                    'estado_perfil'         => 'ACTIVO'
                 ));
         }
 

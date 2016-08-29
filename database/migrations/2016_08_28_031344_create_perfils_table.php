@@ -18,6 +18,7 @@ class CreatePerfilsTable extends Migration {
 			$table->timestamps();
                         $table->string('codigo_perfil',20);
                         $table->string('descripcion_perfil',50);
+                        $table->string('estado_perfil',20);
 		});
 	}
 
