@@ -14,7 +14,7 @@ Route::get('terminos', 'LoginController@login_terminosUso');
 Route::get('muro', 'LoginController@muro');
 Route::get('home', 'HomeController@index');
 
-Route::get('admin', 'AdminController@verUsuarios');
+Route::get('admin', 'AdminController@index');
 
 
 
