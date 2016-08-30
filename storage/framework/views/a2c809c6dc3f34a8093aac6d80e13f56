@@ -42,11 +42,13 @@
 
       <div class="navbar-custom-menu" name="menu1">
         <ul class="nav navbar-nav">
-          <form autocomplete="off" name="user_login" method="post" action="validar.php">
+          <?php echo Form::open(['route'=>'log.store' , 'method'=>'POST']); ?>
+
             <input id="user_mail" name="user_mail" type="email" placeholder=" Usuario (email)" value="">
-            <input id="pass_inicio" name="pass_inicio" type="password" placeholder=" Password">
+            <input id="pass_inicio" name="user_pass" type="password" placeholder=" Password">
             <input id="btn_inicio" class="btn-primary" name="btn_inicio" type="submit" value="Iniciar">
-          </form>
+          <?php echo Form::close(); ?>
+
         </ul>
       </div>
     </nav>

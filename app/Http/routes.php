@@ -9,16 +9,17 @@
 */
 
 Route::get('productindex','LoginController@index');
-
 Route::get('/', 'LoginController@login');
-
 Route::get('terminos', 'LoginController@login_terminosUso');
-
 Route::get('muro', 'LoginController@muro');
-
 Route::get('home', 'HomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('admin', 'AdminController@verUsuarios');
+
+
+
+Route::get('verUsuarios', 'AdminController@verUsuarios');
+
 
 Route::get('welcome', function () {
 return view('welcome', compact('welcome'));
@@ -30,6 +31,7 @@ Route::controllers([
 ]);
 
 Route::resource('usuario', 'UsuarioController');
+Route::resource('log', 'LogController');
 
 
 //Hola Jaime y Carlos!!!

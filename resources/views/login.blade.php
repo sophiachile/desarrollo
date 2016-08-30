@@ -1,5 +1,7 @@
 @extends('layout.masterLogin')
 @section('content')
+@include('alerts.errors')
+
 <article class="container">
 		<div class="row">
 			<div class="col-sm-4">
@@ -37,11 +39,11 @@
 
 				<div class="form-group">
 				  <label class="control-label" for="">Password</label>
-				  <input type="text" class="form-control" name="password" placeholder="Password">
+				  <input type="password" class="form-control" name="password" placeholder="Password">
 				</div>
 				<div class="form-group">
 				  <label class="control-label" for="">Repita Password</label>
-				  <input type="text" class="form-control" name="password_repeticion"placeholder="Repeat Password">
+				  <input type="password" class="form-control" name="password_repeticion"placeholder="Repeat Password">
 				</div>
 
 				<div class="">
@@ -49,7 +51,7 @@
 				  <div class="form-group">
 					  <div class="col-sm-4 multibox">
 						 	<select class="form-control" name="dia_nacimiento">
-						 		<option  value="0" selected="selected" disabled="disabled">Seleccione...</option>
+						 		<option  value="0" selected="selected" disabled="disabled">Día...</option>
 						 		<option  value="1">1</option>
 						 		<option  value="2">2</option>
 						 		<option  value="3">3</option>
@@ -85,7 +87,7 @@
 					  </div>
 					  <div class="col-sm-4 multibox">
 						 	<select class="form-control" name="mes_nacimiento">
-						 		<option value="0" selected="selected" disabled="disabled">Seleccione...</option>
+						 		<option value="0" selected="selected" disabled="disabled">Mes...</option>
 						 		<option value="1">Enero</option>
 						 		<option value="2">Febrero</option>
 						 		<option value="3">Marzo</option>
@@ -102,7 +104,7 @@
 					  </div>
 					  <div class="col-sm-4 multibox">
 						 	<select class="form-control" name="ano_nacimiento">
-						 		<option  value="0" selected="selected" disabled="disabled">Seleccione...</option>
+						 		<option  value="0" selected="selected" disabled="disabled">Año...</option>
 						 		<option  value="1970">1970</option>
 						 		<option  value="1971">1971</option>
 						 		<option  value="1972">1972</option>
@@ -161,9 +163,4 @@
 			</div>
 		</div>
 </article>
-
-
-
-
-
 @stop()
