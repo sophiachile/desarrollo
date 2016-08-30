@@ -48,7 +48,7 @@
 					<label>Birthday</label>
 				  <div class="form-group">
 					  <div class="col-sm-4 multibox">
-						 	<select class="form-control">
+						 	<select class="form-control" name="dia_nacimiento">
 						 		<option  value="0" selected="selected" disabled="disabled">Seleccione...</option>
 						 		<option  value="1">1</option>
 						 		<option  value="2">2</option>
@@ -84,7 +84,7 @@
 						 	</select>
 					  </div>
 					  <div class="col-sm-4 multibox">
-						 	<select class="form-control">
+						 	<select class="form-control" name="mes_nacimiento">
 						 		<option value="0" selected="selected" disabled="disabled">Seleccione...</option>
 						 		<option value="1">Enero</option>
 						 		<option value="2">Febrero</option>
@@ -101,7 +101,7 @@
 						 	</select>
 					  </div>
 					  <div class="col-sm-4 multibox">
-						 	<select class="form-control">
+						 	<select class="form-control" name="ano_nacimiento">
 						 		<option  value="0" selected="selected" disabled="disabled">Seleccione...</option>
 						 		<option  value="1970">1970</option>
 						 		<option  value="1971">1971</option>
