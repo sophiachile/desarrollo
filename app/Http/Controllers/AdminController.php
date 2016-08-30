@@ -14,7 +14,7 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		return view('admin.verUsuarios');
+		return view('admin.index');
 	}
 
 	/**
@@ -29,9 +29,8 @@ class AdminController extends Controller {
 
 	public function verUsuarios()
 	{
-		//$usuarios = \Sophia\Usuario::All();
-		//return view('admin.index', compact('usuarios'));
-		return view('admin.verUsuarios');
+		$usuarios = \Sophia\Usuario::All();
+		return view('admin.verUsuarios', compact('usuarios'));
 	}
 	/**
 	 * Store a newly created resource in storage.
