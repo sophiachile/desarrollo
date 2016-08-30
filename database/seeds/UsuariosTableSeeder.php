@@ -46,6 +46,12 @@ class UsuariosTableSeeder extends Seeder {
                     'id_usuario'        => $id,
                     'id_perfil'         => 2
                     ));
+                
+                //crea usuarios en BD sistemas
+                \DB::connection('mysql')->table('usuario_sistemas')->insert(array(
+                    'id'                => $id
+                    ));
+                
             }
         }
 

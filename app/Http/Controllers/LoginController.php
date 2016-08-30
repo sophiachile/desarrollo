@@ -17,6 +17,4 @@ class LoginController extends Controller {
 		return view('product.muro');
 	}
 
-
-
 }

@@ -38,6 +38,10 @@ class AdministradorTableSeeder extends Seeder{
             'id_perfil'         => 1 //codigo_perfil administrador
         ));
           
+        //crea usuarios en BD sistemas
+        \DB::connection('mysql')->table('usuario_sistemas')->insert(array(
+           'id'                => $id
+        ));
          
     }
             
