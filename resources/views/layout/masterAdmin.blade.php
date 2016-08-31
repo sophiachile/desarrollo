@@ -36,7 +36,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"> <img src="asset/dist/img/logoNegro.png" style="text-align:center">
+      <span class="logo-lg"> <img src="/asset/dist/img/logoNegro.png" style="text-align:center">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -221,8 +221,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="verUsuarios"><i class="fa fa-circle-o"></i>Administrar</a></li>
-            <li><a href="profile.html"><i class="fa fa-circle-o"></i> Estadísticas</a></li>
+            <li><a href="/verUsuarios"><i class="fa fa-circle-o"></i>Listar y Editar</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Estadísticas</a></li>
           </ul>
         </li>
       </ul>

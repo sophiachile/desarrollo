@@ -1,7 +1,6 @@
 @extends('layout.masterLogin')
 @section('content')
-@include('alerts.errors')
-
+@include('alerts.request')
 <article class="container">
 		<div class="row">
 			<div class="col-sm-4">
