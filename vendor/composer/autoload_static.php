@@ -7,14 +7,13 @@ namespace Composer\Autoload;
 class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
 {
     public static $files = array (
-        '9f7f3f9b1f82484e76bcd07b985a2d2f' => __DIR__ . '/..' . '/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php',
-        'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
-        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
-        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '65fec9ebcfbb3cbb4fd0d519687aea01' => __DIR__ . '/..' . '/danielstjules/stringy/src/Create.php',
+        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
@@ -37,12 +36,28 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         array (
             'Symfony\\Polyfill\\Util\\' => 22,
             'Symfony\\Polyfill\\Php56\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\Filesystem\\' => 29,
+            'Symfony\\Component\\VarDumper\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Component\\HttpKernel\\' => 29,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Component\\CssSelector\\' => 30,
+            'Symfony\\Component\\Console\\' => 26,
             'SuperClosure\\' => 13,
             'Stringy\\' => 8,
             'Sophia\\' => 7,
+        ),
+        'P' => 
+        array (
+            'Psy\\' => 4,
+            'PhpParser\\' => 10,
         ),
         'M' => 
         array (
@@ -95,17 +110,61 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
         ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
-        'Symfony\\Component\\Filesystem\\' => 
+        'Symfony\\Component\\VarDumper\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/filesystem',
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Routing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/routing',
+        ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
+        'Symfony\\Component\\HttpKernel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-kernel',
+        ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
         ),
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
+        'Symfony\\Component\\CssSelector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/css-selector',
+        ),
+        'Symfony\\Component\\Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/console',
         ),
         'SuperClosure\\' => 
         array (
@@ -118,6 +177,14 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         'Sophia\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Psy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psy/psysh/src/Psy',
+        ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
         'Monolog\\' => 
         array (
@@ -154,55 +221,8 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
     );
 
     public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Symfony\\Component\\VarDumper\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/var-dumper',
-            ),
-            'Symfony\\Component\\Translation\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/translation',
-            ),
-            'Symfony\\Component\\Security\\Core\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/security-core',
-            ),
-            'Symfony\\Component\\Routing\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/routing',
-            ),
-            'Symfony\\Component\\Process\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/process',
-            ),
-            'Symfony\\Component\\HttpKernel\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/http-kernel',
-            ),
-            'Symfony\\Component\\HttpFoundation\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/http-foundation',
-            ),
-            'Symfony\\Component\\Finder\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/finder',
-            ),
-            'Symfony\\Component\\Debug\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/debug',
-            ),
-            'Symfony\\Component\\Console\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/symfony/console',
-            ),
-        ),
         'P' => 
         array (
-            'Psy\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/psy/psysh/src',
-            ),
             'Psr\\Log\\' => 
             array (
                 0 => __DIR__ . '/..' . '/psr/log',
@@ -253,16 +273,17 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
 
     public static $classMap = array (
         'AdministradorTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdministradorTableSeeder.php',
-        'CreateLogAccesosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_033011_create_log_accesos_table.php',
-        'CreateMenusTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031514_create_menus_table.php',
-        'CreateModulosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031406_create_modulos_table.php',
-        'CreatePerfilModulosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031601_create_perfil_modulos_table.php',
-        'CreatePerfilsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031344_create_perfils_table.php',
-        'CreateRolUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031634_create_rol_usuarios_table.php',
-        'CreateRolsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031440_create_rols_table.php',
-        'CreateUsuarioPasswordHistoricosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_032204_create_usuario_password_historicos_table.php',
-        'CreateUsuarioPerfilsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031542_create_usuario_perfils_table.php',
-        'CreateUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_28_031115_create_usuarios_table.php',
+        'CreateLogAccesosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_033011_create_log_accesos_table.php',
+        'CreateMenusTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031514_create_menus_table.php',
+        'CreateModulosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031406_create_modulos_table.php',
+        'CreatePerfilModulosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031601_create_perfil_modulos_table.php',
+        'CreatePerfilsTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031344_create_perfils_table.php',
+        'CreateRolUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031634_create_rol_usuarios_table.php',
+        'CreateRolsTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031440_create_rols_table.php',
+        'CreateUsuarioPasswordHistoricosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_032204_create_usuario_password_historicos_table.php',
+        'CreateUsuarioPerfilsTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031542_create_usuario_perfils_table.php',
+        'CreateUsuarioSistemasTable' => __DIR__ . '/../..' . '/database/migrations/migration_sistemas/2016_08_30_015035_create_usuario_sistemas_table.php',
+        'CreateUsuariosTable' => __DIR__ . '/../..' . '/database/migrations/migration_seguridad/2016_08_28_031115_create_usuarios_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
@@ -701,7 +722,7 @@ class ComposerStaticInit915c4854ce9ae70af57def49b4fb0366
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
+        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'UsuariosTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsuariosTableSeeder.php',
