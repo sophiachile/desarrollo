@@ -1,12 +1,31 @@
 <?php $__env->startSection('content'); ?>
 
+	<table class="table">
+		<thead>
+			<th>id</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Fecha Nacimiento</th>
+			<th>Email</th>
+			<th>Estado</th>
+			<th>Operacion</th>
+		</thead>
+		<?php foreach($usuarios as $usuario): ?>
+			<tbody>
+				<td><?php echo e($usuario->id); ?></td>
+				<td><?php echo e($usuario->nombre); ?></td>
+				<td><?php echo e($usuario->apellido); ?></td>
+				<td><?php echo e($usuario->fecha_nacimiento); ?></td>
+				<td><?php echo e($usuario->email); ?></td>
+				<td><?php echo e($usuario->estado); ?></td>
 
+				<td>
+					<?php echo link_to_route('usuario.edit', $title = 'Editar', $parameters = $usuario, $attributes = ['class'=>'btn btn-primary']); ?>
 
-
-
-
-
-
-
-$stop()
+				</td>
+			</tbody>
+		<?php endforeach; ?>
+	</table>
+</div>
+<?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.masterAdmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

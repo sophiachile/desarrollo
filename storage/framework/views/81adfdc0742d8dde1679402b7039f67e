@@ -1,0 +1,12 @@
+	<?php $__env->startSection('content'); ?>
+	<?php echo $__env->make('alerts.request', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php echo Form::model($usuario,['route'=> ['usuario.update', $usuario], 'method'=>'PUT']); ?>
+
+		<?php echo $__env->make('usuario.forms.usr', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+		<?php echo Form::close(); ?>
+
+	<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.masterAdmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

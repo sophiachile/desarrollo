@@ -1,6 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<?php echo $__env->make('alerts.errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
+<?php echo $__env->make('alerts.request', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <article class="container">
 		<div class="row">
 			<div class="col-sm-4">
@@ -164,10 +163,5 @@
 			</div>
 		</div>
 </article>
-
-
-
-
-
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.masterLogin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
