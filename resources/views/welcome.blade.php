@@ -47,6 +47,14 @@
   		</div>
   </div>
   
+  <div class="form-group">
+    <label for="ramos-carrera">Seleccione los ramos de su carrera que decea agregar a su perfil</label>
+    	<div > 
+   		<select name="select-ramosCarrera" size="20" multiple="multiple"></select>
+         <button type="submit" class="btn btn-default">Agregar</button>
+  		</div>
+  </div>
+  
   <button type="submit" class="btn btn-default">Enviar</button>
 					</form>
 		        </div>
