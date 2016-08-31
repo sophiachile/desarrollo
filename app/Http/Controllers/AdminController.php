@@ -16,7 +16,6 @@ class AdminController extends Controller {
 	{
 		return view('admin.index');
 	}
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -27,11 +26,6 @@ class AdminController extends Controller {
 		//
 	}
 
-	public function verUsuarios()
-	{
-		$usuarios = \Sophia\Usuario::All();
-		return view('admin.verUsuarios', compact('usuarios'));
-	}
 	/**
 	 * Store a newly created resource in storage.
 	 *
@@ -50,7 +44,7 @@ class AdminController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		
 	}
 
 	/**
@@ -61,7 +55,7 @@ class AdminController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+
 	}
 
 	/**
@@ -72,7 +66,7 @@ class AdminController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+
 	}
 
 	/**
@@ -83,7 +77,9 @@ class AdminController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$this->usuario->delete();
+        Session::flash('message','Usuario Eliminado Correctamente');
+        return Redirect::to('/admin');
 	}
 
 }

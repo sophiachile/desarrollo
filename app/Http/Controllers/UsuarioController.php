@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 
 use Sophia\Http\Requests;
+use Sophia\Http\Requests\UsuarioCreateRequest;
+use Sophia\Http\Requests\UsuarioUpdateRequest;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -19,7 +21,7 @@ class UsuarioController extends Controller
 	{
 		return view('usuario.create');
 	}
-	public function store(Request $request)
+	public function store(UsuarioCreateRequest $request)
 	{
 		$dia = $request['dia_nacimiento'];
 		$mes = $request['mes_nacimiento'];
@@ -34,7 +36,26 @@ class UsuarioController extends Controller
 		$usuarios = \Sophia\Usuario::All();
 		return view('layout.master', compact('usuarios'));
 	}
-	public function getUserById(){
-		return "hola";
+
+    public function update(UsuarioUpdateRequest $request, $id)
+    {
+        $usuario = \Sophia\Usuario::find($id);
+        $usuario->fill($request->all());
+        $usuario->save();
+        Session::flash('message','Usuario Actualizado Correctamente');
+        return Redirect::to('/usuario');
+    }
+
+    public function verUsuarios()
+	{
+		$usuarios = \Sophia\Usuario::All();
+		return view('admin.verUsuarios', compact('usuarios'));
 	}
+	public function edit($id)
+    {
+        $usuario = \Sophia\Usuario::find($id);
+        return view('admin.edit',['usuario'=>$usuario]);
+    }
+
+
 }
