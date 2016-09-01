@@ -16,6 +16,7 @@ class usuario extends Model implements AuthenticatableContract,
                                     {
     use Authenticatable, Authorizable, CanResetPassword;
 	protected $connection = 'mysql_seguridad';
+    
  	protected $table = 'seguridad_desarrollo.usuarios';
      
     protected $fillable = [
