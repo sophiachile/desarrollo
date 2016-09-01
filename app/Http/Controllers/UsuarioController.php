@@ -7,7 +7,8 @@ use Sophia\Http\Requests\UsuarioCreateRequest;
 use Sophia\Http\Requests\UsuarioUpdateRequest;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+use Session;
+use Redirect;
 
 class UsuarioController extends Controller
 {
@@ -43,7 +44,7 @@ class UsuarioController extends Controller
         $usuario->fill($request->all());
         $usuario->save();
         Session::flash('message','Usuario Actualizado Correctamente');
-        return Redirect::to('/usuario');
+        return Redirect::to('/admin');
     }
 
     public function verUsuarios()

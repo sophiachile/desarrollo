@@ -30,7 +30,7 @@ class UsuarioUpdateRequest extends Request
             'nombre'    => 'required',
             'apellido'  => 'required',
             'password'  => 'required',
-            'email'     => 'required|unique:usuarios',
+            'email'     => 'required',
             'estado'    => 'required',
         ];
     }
