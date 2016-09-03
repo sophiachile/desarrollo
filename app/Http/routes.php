@@ -26,6 +26,10 @@ Route::get('welcome', function () {
 return view('welcome', compact('welcome'));
 });
 
+Route::get('registroAcademico', function () {
+return view('registroAcademico', compact('registroAcademico'));
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
