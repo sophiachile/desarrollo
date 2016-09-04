@@ -19,25 +19,53 @@ class CarreraRamosTableSeeder extends Seeder {
 	 */
         public function run()
         {
-                //modulo administración de usuarios
-                $idCarrera = \DB::table('carreras')->insertGetId(array(
-                    'nombre_carrera'    => 'Ingeniería en Computación e Informática',
-                    'nombre_carrera_html'    => 'Ingenier&iacute;a en Computaci&oacute;n e Inform&aacute;tica',
-                    'nombre_carrera_no_tilde'    => 'Ingenieria en Computacion e Informatica',
-                ));
-
-                $idRamo = \DB::table('ramos')->insertGetId(array(
-                    'nombre_ramo'    => 'Matemáticas I',
-                    'nombre_ramo_html'    => 'Matem&aacute;ticas I',
-                    'nombre_ramo_no_tilde'    => 'Matematicas I',
-                ));
-
-                //insertamos relacion perfil modulo
-                \DB::table('carrera_ramos')->insert(array(
-                    'id_carrera'         => $idCarrera,
-                    'id_ramo'         => $idRamo //perfil administrador
-                ));
-                
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 1));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 2));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 3));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 4));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 5));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 6));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 7));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 8));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 9));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 10));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 11));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 12));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 13));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 14));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 15));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 16));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 17));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 18));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 19));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 20));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 21));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 22));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 23));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 24));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 25));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 26));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 27));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 28));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 29));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 30));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 31));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 32));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 33));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 34));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 35));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 36));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 37));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 38));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 39));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 40));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 41));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 42));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 43));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 44));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 45));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 46));
+        \DB::table('carrera_ramos')->insertGetId(array('id_carrera' => 56, 'id_ramo' => 47));
         }
 
 }

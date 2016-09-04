@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsuarioRamosTable extends Migration
+class CreateUsuarioRamoDocentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,13 @@ class CreateUsuarioRamosTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario_ramos', function (Blueprint $table) {
+        Schema::connection('mysql')->create('usuario_ramo_docentes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->integer('id_usuario')->unsigned();
-            $table->integer('id_docente_ramos')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('usuarios');
-            $table->foreign('id_docente_ramos')->references('id')->on('docente_ramos');
+            $table->integer('id_ramo_docente')->unsigned();
+            $table->foreign('id_usuario')->references('id')->on('seguridad_desarrollo.usuarios');
+            $table->foreign('id_ramo_docente')->references('id')->on('ramo_docentes');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateUsuarioRamosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('usuario_ramos');
+        Schema::drop('usuario_ramo_docentes');
     }
 }

@@ -19,6 +19,7 @@ class CreateCarrerasTable extends Migration
             $table->string('nombre_carrera_html', 100);
             $table->string('nombre_carrera_no_tilde', 100);
         });
+
     }
 
     /**

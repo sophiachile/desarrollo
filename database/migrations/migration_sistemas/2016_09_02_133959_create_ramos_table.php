@@ -19,6 +19,8 @@ class CreateRamosTable extends Migration
             $table->string('nombre_ramo_html', 100);
             $table->string('nombre_ramo_no_tilde', 100);
         });
+
+
     }
 
     /**
@@ -30,4 +32,5 @@ class CreateRamosTable extends Migration
     {
         Schema::drop('ramos');
     }
+
 }

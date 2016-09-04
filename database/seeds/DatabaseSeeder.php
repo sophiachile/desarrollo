@@ -36,9 +36,18 @@ class DatabaseSeeder extends Seeder {
 
 
       // Seeds Sistema
+      $this->call('InstitucionsTableSeeder');
+      $this->call('CarrerasTableSeeder');
+      $this->call('DocentesTableSeeder');
+      $this->call('RegimenTableSeeder');
+
+
+
+      $this->call('RamosTableSeeder');
+      $this->call('RamoDocentesTableSeeder');
       $this->call('CarreraRamosTableSeeder');
-
-
+      $this->call('InstitucionCarrerasTableSeeder');
+      $this->call('UsuarioRamoDocentesTableSeeder');
 	}
 
 }
