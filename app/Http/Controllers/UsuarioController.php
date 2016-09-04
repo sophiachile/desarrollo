@@ -35,7 +35,11 @@ class UsuarioController extends Controller
 			'password' => bcrypt($request["password"]),
 			]);      
 		$usuarios = \Sophia\Usuario::All();
-		return view('layout.master', compact('usuarios'));
+		/* 
+		*Preguntar a traves de un IF si es primera ves que se loguea
+		*si es asi que direccione 
+		*/
+		return view('registroAcademico');
 	}
 
     public function update(UsuarioUpdateRequest $request, $id)
