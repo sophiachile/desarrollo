@@ -29,6 +29,12 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
+
+
+
+
+
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -139,7 +145,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{asset('asset/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">{{$usuario->nombre}} {{$usuario->apellido}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -147,7 +153,7 @@
                 <img src="{{asset('asset/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  {{$usuario->nombre}} {{$usuario->apellido}} - Estudiante
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -198,7 +204,7 @@
           <img src="{{asset('asset/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>{{$usuario->nombre}} {{$usuario->apellido}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -215,10 +221,11 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header" style="color:white;">RAMOS</li>
-        <li class="treeview active">
+        <li class="header" style="color:white;"><b>RAMOS</b></li>
+      @foreach($ramos as $ramo)
+        <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Estadísticas y Probabilidad </span>
+            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -232,6 +239,7 @@
             <li><a href="404.html"><i class="fa fa-circle-o"></i> Otros</a></li>
           </ul>
         </li>
+      @endforeach
       </ul>
     </section>
     <!-- /.sidebar -->
