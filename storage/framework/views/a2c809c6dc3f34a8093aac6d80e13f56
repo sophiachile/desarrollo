@@ -28,7 +28,6 @@
 <body class="hold-transition skin-blue">
 <!-- Site wrapper -->
 <div class="wrapper">
-
   <header class="main-header">
     <!-- Logo -->
     <a href="/" class="logo">
@@ -44,9 +43,15 @@
         <ul class="nav navbar-nav">
           <?php echo Form::open(['route'=>'log.store' , 'method'=>'POST']); ?>
 
-            <input id="user_mail" name="user_mail" type="email" placeholder=" Usuario (email)" value="">
-            <input id="pass_inicio" name="user_pass" type="password" placeholder=" Password">
-            <input id="btn_inicio" class="btn-primary" name="btn_inicio" type="submit" value="Iniciar">
+<?php echo Form::label('correo', 'Correo:'); ?>
+
+                <?php echo Form::email('email',null,['placeholder'=>'Ingresa tu correo']); ?>
+
+                
+                <?php echo Form::label('contrasena', 'Contraseña:'); ?>
+
+                <?php echo Form::password('password',['placeholder'=>'Ingresa tu contraseña']); ?>
+
           <?php echo Form::close(); ?>
 
         </ul>

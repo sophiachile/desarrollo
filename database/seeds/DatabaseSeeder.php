@@ -41,13 +41,10 @@ class DatabaseSeeder extends Seeder {
       $this->call('DocentesTableSeeder');
       $this->call('RegimenTableSeeder');
 
-
-
       $this->call('RamosTableSeeder');
       $this->call('RamoDocentesTableSeeder');
       $this->call('CarreraRamosTableSeeder');
       $this->call('InstitucionCarrerasTableSeeder');
       $this->call('UsuarioRamoDocentesTableSeeder');
 	}
-
 }

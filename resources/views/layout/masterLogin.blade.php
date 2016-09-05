@@ -28,7 +28,6 @@
 <body class="hold-transition skin-blue">
 <!-- Site wrapper -->
 <div class="wrapper">
-
   <header class="main-header">
     <!-- Logo -->
     <a href="/" class="logo">

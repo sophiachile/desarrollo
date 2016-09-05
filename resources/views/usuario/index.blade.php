@@ -6,7 +6,7 @@
 
 <!-- http://bootdey.com/snippets/view/social-network-wall // de aquí saqué el template-->
 <link rel="stylesheet" href="{{asset('css/index_UsuarioMuro.css')}}">  
-<div class="container bootstrap snippet" Style="width:80%">
+<div class="container bootstrap snippet" Style="width:80%; margin-top:50px">
     <div class="row">
     	<div class="panel" Style="padding-left:15px">
 			<h2> Muro de Ingeniería Informática </h1>

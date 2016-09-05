@@ -8,6 +8,9 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo e(asset('asset/bootstrap/css/bootstrap.min.css')); ?>">
+  
+  
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -26,11 +29,19 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
+
+
+
+
+
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
 
+
   <header class="main-header">
+    <div style="position:fixed !important; right:0px; top:0px; z-index:10 !important; width:100%;">
     <!-- Logo -->
     <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -39,7 +50,7 @@
       <span class="logo-lg"> <img src="asset/dist/img/logoNegro.png" style="text-align:center">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top" >
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -136,7 +147,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo e(asset('asset/dist/img/user2-160x160.jpg')); ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo e($usuario->nombre); ?> <?php echo e($usuario->apellido); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -144,7 +155,7 @@
                 <img src="<?php echo e(asset('asset/dist/img/user2-160x160.jpg')); ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  <?php echo e($usuario->nombre); ?> <?php echo e($usuario->apellido); ?> - Estudiante
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -181,12 +192,15 @@
         </ul>
       </div>
     </nav>
-  </header>
 
+
+    </div>
+
+  </header>
   <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
-  <aside class="main-sidebar">
+  <aside class="main-sidebar" >
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -195,7 +209,7 @@
           <img src="<?php echo e(asset('asset/dist/img/user2-160x160.jpg')); ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p><?php echo e($usuario->nombre); ?> <?php echo e($usuario->apellido); ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -212,10 +226,11 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header" style="color:white;">RAMOS</li>
-        <li class="treeview active">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Estadísticas y Probabilidad </span>
+        <li class="header" style="color:white;"><b>RAMOS</b></li>
+      <?php foreach($ramos as $ramo): ?>
+        <li class="treeview">
+          <a href="<?php echo e(route('ramo.index', $ramo->id)); ?>">
+            <i class="fa fa-folder"></i> <span><?php echo e($ramo->nombre_ramo); ?></span></a>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -229,6 +244,7 @@
             <li><a href="404.html"><i class="fa fa-circle-o"></i> Otros</a></li>
           </ul>
         </li>
+      <?php endforeach; ?>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -462,5 +478,7 @@
 <script src="<?php echo e(asset('asset/dist/js/app.min.js')); ?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo e(asset('asset/dist/js/demo.js')); ?>"></script>
+
+
 </body>
 </html>

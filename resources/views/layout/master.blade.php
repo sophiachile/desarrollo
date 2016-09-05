@@ -39,7 +39,9 @@
 <!-- Site wrapper -->
 <div class="wrapper">
 
+
   <header class="main-header">
+    <div style="position:fixed !important; right:0px; top:0px; z-index:10 !important; width:100%;">
     <!-- Logo -->
     <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -48,7 +50,7 @@
       <span class="logo-lg"> <img src="asset/dist/img/logoNegro.png" style="text-align:center">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top" >
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -190,12 +192,15 @@
         </ul>
       </div>
     </nav>
-  </header>
 
+
+    </div>
+
+  </header>
   <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
-  <aside class="main-sidebar">
+  <aside class="main-sidebar" >
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -224,8 +229,8 @@
         <li class="header" style="color:white;"><b>RAMOS</b></li>
       @foreach($ramos as $ramo)
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span>
+          <a href="{{ route('ramo.index', $ramo->id)}}">
+            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span></a>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

@@ -16,11 +16,9 @@ Route::get('home', 'HomeController@index');
 
 Route::get('admin', 'AdminController@index');
 
-
 Route::get('editUsuarios', 'AdminController@edit');
 
 Route::get('verUsuarios', 'UsuarioController@verUsuarios');
-
 
 Route::get('welcome', function () {
 return view('welcome', compact('welcome'));
@@ -38,6 +36,7 @@ Route::controllers([
 Route::resource('administrador', 'AdminController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('log', 'LogController');
+Route::resource('ramo', 'RamoController');
 
 
 
