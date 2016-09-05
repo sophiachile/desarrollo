@@ -16,10 +16,10 @@ class UsuarioController extends Controller
 	public function index()
 	{
 		$usuarios = \Sophia\Usuario::All();
-
 		$id = 1;
 		// st04092016 - Se traen al usuario logeado
 		$usuario = \Sophia\Usuario::find($id); 
+
 		// st04092016 - Se traen los ramos que pertenecen al usuario
        	$ramos = DB::table('usuario_ramo_docentes')
         ->join('ramo_docentes', 'usuario_ramo_docentes.id_ramo_docente', '=', 'ramo_docentes.id_ramo')
@@ -38,12 +38,13 @@ class UsuarioController extends Controller
 	{
 		return view('usuario.create');
 	}
+
 	public function store(UsuarioCreateRequest $request)
 	{
 		$dia = $request['dia_nacimiento'];
 		$mes = $request['mes_nacimiento'];
 		$ano = $request['ano_nacimiento'];
-		\Sophia\Usuario::create([
+		\Sophia\Usuario::connection('mysql_seguridad')->create([
 			'nombre' => $request['nombre'],
 			'apellido' => $request['apellido'],
 			'email' => $request['email'],
