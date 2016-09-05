@@ -227,10 +227,10 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header" style="color:white;"><b>RAMOS</b></li>
-      @foreach($ramos as $ramo)
+      @foreach($ramos as $ramo) 
         <li class="treeview">
-          <a href="{{ route('ramo.index', $ramo->id)}}">
-            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span></a>
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
