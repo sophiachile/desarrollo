@@ -36,7 +36,9 @@ Route::controllers([
 Route::resource('administrador', 'AdminController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('log', 'LogController');
-Route::resource('ramo', 'RamoController');
+
+
+Route::get('ramo/{ramo}', 'RamoController@index');
 
 
 

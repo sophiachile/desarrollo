@@ -230,7 +230,8 @@
       @foreach($ramos as $ramo) 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>{{$ramo->nombre_ramo}}</span>
+          <a href="ramo/{{$ramo->nombre_ramo}}">
+            <i class="fa fa-folder"></i><span>{{$ramo->nombre_ramo}}</span></a>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
