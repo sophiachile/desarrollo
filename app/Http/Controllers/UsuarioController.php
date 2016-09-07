@@ -24,19 +24,32 @@ class UsuarioController extends Controller
        	$ramos = DB::table('usuario_ramo_docentes')
         ->join('ramo_docentes', 'usuario_ramo_docentes.id_ramo_docente', '=', 'ramo_docentes.id_ramo')
         ->join('ramos', 'ramo_docentes.id_ramo', '=', 'ramos.id')
-        ->select('ramos.*', 'nombre_ramo', 'nombre_ramo_html')
+        ->select('ramos.*', 'id_ramo', 'nombre_ramo', 'nombre_ramo_html')
         ->where('usuario_ramo_docentes.id_usuario', '=', $id)
         ->distinct()
         ->orderBy('nombre_ramo')
         ->get();
 
-        return view('usuario.index',['ramos'=>$ramos, 'usuario'=>$usuario]);
+        $carreras = DB::table('usuario_ramo_docentes')
+        ->join('ramo_docentes', 'usuario_ramo_docentes.id_ramo_docente', '=', 'ramo_docentes.id_ramo')
+        ->join('carrera_ramos', 'ramo_docentes.id_ramo', '=', 'carrera_ramos.id_ramo')
+        ->join('carreras', 'carrera_ramos.id_carrera', '=', 'carreras.id')
+        ->select('id_carrera', 'nombre_carrera')
+        ->where('usuario_ramo_docentes.id_usuario', '=', $id)
+        ->distinct()
+        ->get();
+        
+        Session::put('carreras', $carreras);
+        Session::put('ramos', $ramos);
+        Session::put('usuario', $usuario);
+
+        return view('usuario.index');
 		//return view('usuario.index', compact('usuarios'));
 	}
 
 	public function create()
 	{
-		return view('usuario.create');
+		return view('admin.crearUsuarios');
 	}
 
 	public function store(UsuarioCreateRequest $request)
@@ -73,6 +86,17 @@ class UsuarioController extends Controller
 		$usuarios = \Sophia\Usuario::All();
 		return view('admin.verUsuarios', compact('usuarios'));
 	}
+
+    public function crearUsuarios()
+    {
+        if($request->ajax()){
+            Genre::create($request->all());
+            return response()->json([
+                "mensaje" => "creado"
+            ]);
+        }
+    }
+
 	public function edit($id)
     {
         $usuario = \Sophia\Usuario::find($id);
