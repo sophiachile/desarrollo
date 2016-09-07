@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Sophia\Http\Requests;
 use Sophia\Http\Controllers\Controller;
+use Session;
 
 class RamoController extends Controller
 {
@@ -14,9 +15,11 @@ class RamoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($ramo)
+    public function index($id_ramo)
     {
-        return view ("ramo.muro", ['ramo'=>$ramo]);
+        $ramo = \Sophia\Ramo::find($id_ramo);
+        Session::put('ramo', $ramo);
+        return view("ramo.muro", ['ramo'=>$ramo]);
     }
 
     /**
@@ -28,7 +31,6 @@ class RamoController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -37,7 +39,7 @@ class RamoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
