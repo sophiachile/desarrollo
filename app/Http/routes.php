@@ -19,6 +19,12 @@ Route::get('admin', 'AdminController@index');
 Route::get('editUsuarios', 'AdminController@edit');
 
 Route::get('verUsuarios', 'UsuarioController@verUsuarios');
+Route::get('crearUsuarios', 'UsuarioController@crearUsuarios');
+
+
+
+
+
 
 Route::get('welcome', function () {
 return view('welcome', compact('welcome'));
@@ -33,6 +39,8 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+
+Route::resource('registroAcademico', 'registroAcademicoController');
 Route::resource('administrador', 'AdminController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('log', 'LogController');
