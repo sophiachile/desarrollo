@@ -222,6 +222,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/verUsuarios"><i class="fa fa-circle-o"></i>Listar y Editar</a></li>
+            <li><a href="/crearUsuarios"><i class="fa fa-circle-o"></i>Crear</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Estadísticas</a></li>
           </ul>
         </li>

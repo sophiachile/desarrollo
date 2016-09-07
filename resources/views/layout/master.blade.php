@@ -29,12 +29,11 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-
-
-
-
-
-
+<?php
+$carreras = Session::get('carreras');
+$ramos = Session::get('ramos');
+$usuario = Session::get('usuario');
+?>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -47,7 +46,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"> <img src="asset/dist/img/logoNegro.png" style="text-align:center">
+      <span class="logo-lg"> <img src="{{asset('asset/dist/img/logoNegro.png')}}" style="text-align:center">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" >
@@ -156,7 +155,12 @@
 
                 <p>
                   {{$usuario->nombre}} {{$usuario->apellido}} - Estudiante
-                  <small>Member since Nov. 2012</small>
+                  @foreach($carreras as $carrera) 
+                  <small>
+                  {{$carrera->nombre_carrera}}
+         
+                  </small>
+                  @endforeach
                 </p>
               </li>
               <!-- Menu Body -->
@@ -210,6 +214,7 @@
         </div>
         <div class="pull-left info">
           <p>{{$usuario->nombre}} {{$usuario->apellido}}</p>
+ 
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -229,19 +234,16 @@
         <li class="header" style="color:white;"><b>RAMOS</b></li>
       @foreach($ramos as $ramo) 
         <li class="treeview">
-          <a href="#">
-          <a href="ramo/{{$ramo->nombre_ramo}}">
-            <i class="fa fa-folder"></i><span>{{$ramo->nombre_ramo}}</span></a>
+          <a href="">
+            <i class="fa fa-folder"></i><span>{{$ramo->nombre_ramo}}</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              <i class="fa fa-angle-left pull-right" ></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="invoice.html"><i class="fa fa-circle-o"></i> Pruebas y Controles</a></li>
-            <li><a href="profile.html"><i class="fa fa-circle-o"></i> Trabajos y Tareas</a></li>
-            <li><a href="login.html"><i class="fa fa-circle-o"></i> Apuntes</a></li>
-            <li><a href="register.html"><i class="fa fa-circle-o"></i> Videos</a></li>
-            <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Audios</a></li>
+            <li><a href="/ramo/{{$ramo->id_ramo}}"><i class="fa fa-circle-o"></i> Muro</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Contenidos</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Notas y Fechas de Prueba</a></li>
             <li><a href="404.html"><i class="fa fa-circle-o"></i> Otros</a></li>
           </ul>
         </li>
