@@ -6,7 +6,7 @@
 	
 		<h3><i class="fa fa-shield"></i>Edición de Usuarios</h3>
 	  	<hr>
-	  	
+
 		<div class="form-group">
 		  <label class="control-label" for="">Nombre</label>
 		  <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="{{$usuario->nombre}}">

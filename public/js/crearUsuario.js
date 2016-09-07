@@ -1,6 +1,6 @@
 $("#registro").click(function(){
 	var dato = $("#genre").val();
-	var route = "/usuario";
+	var route = "/usuario/create";
 	var token = $("#token").val();
 
 	$.ajax({

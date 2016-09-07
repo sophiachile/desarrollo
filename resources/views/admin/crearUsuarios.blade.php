@@ -10,6 +10,5 @@
 		{!!link_to('#', $title='Crear', $attributes = ['id'=>'registro', 'class'=>'btn btn-primary'], $secure = null)!!}
 	{!!Form::close()!!}
 
-	{!!Html::script('js/crearUsuario.js')!!}
-
+	
 @endsection

@@ -113,6 +113,10 @@ class UsuarioController extends Controller
         return view('admin.edit',['ramos'=>$ramos]);
     }
 
+    public function profile()
+    {
+        return view('usuario.profile');
+    }
 
 		
 
