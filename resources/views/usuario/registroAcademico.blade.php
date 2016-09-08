@@ -3,7 +3,12 @@
 
 
 @section('content')
-
+<?php
+$carreras = Session::get('carreras');
+$ramos = Session::get('ramos');
+$usuario = Session::get('usuario');
+$tipos = Session::get('tipos');
+?>
 <!-- http://bootdey.com/snippets/view/social-network-wall // de aquí saqué el template-->
 <link rel="stylesheet" href="{{asset('css/index_UsuarioMuro.css')}}">  
 <div class="container bootstrap snippet" Style="width:80%; margin-top:50px">
@@ -20,16 +25,12 @@
                     con otros usuarios, es necesario que completes la siguiente informacion:
                    </p>
                    <form role="form">
+                   
   					<div class="form-group" style=" width:350px;">
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
-   								<select name="select-tipoInstitucion" class="form-control" >
- 								 <option>1</option>
-         					 	<option>2</option>
- 								 <option>3</option>
- 								 <option>4</option>
-		   						  <option>5</option>
-								</select>
+                            
+   								{{Form::select('tipos', $tipos->descripcion,$tipos->id)}}
   							</div>
  					 </div>
   
