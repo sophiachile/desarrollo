@@ -1,5 +1,5 @@
 
-@extends('layout.master')
+@extends('layout.masterUsuario')
 
 
 @section('content')
@@ -29,9 +29,17 @@ $tipos = Session::get('tipos');
   					<div class="form-group" style=" width:350px;">
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
+                                                        
+                             
+                     <!-- {!! Form::select('tiposInstituciones', $tipos, null, ['class' => 'form-control']) !!}-->
+                     {!! Form::select('tipos', 
+        (['0' => 'Seleccione el tipo de Institucion'] + $tipos), 
+            null, 
+            ['class' => 'form-control']) !!}
+                             
                             
-   								{{Form::select('tipos', $tipos->descripcion,$tipos->id)}}
-  							</div>
+                            
+                             </div>
  					 </div>
   
  					 <div class="form-group" style=" width:350px;">

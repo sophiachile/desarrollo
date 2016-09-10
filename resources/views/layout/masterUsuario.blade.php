@@ -33,6 +33,7 @@
 $carreras = Session::get('carreras');
 $ramos = Session::get('ramos');
 $usuario = Session::get('usuario');
+$tipos = Session::get('tipos');
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->

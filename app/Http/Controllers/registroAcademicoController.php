@@ -10,7 +10,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use Session;
 use Redirect;
-use Sophia\tipo_institucion;
+
 
 class registroAcademicoController extends Controller
 {
@@ -41,19 +41,7 @@ public function index()
         ->distinct()
 		->get();
        
-	   
-		/*
-		$tipos = DB::table('tipo_institucions')  
-		->select('id', 'descripcion')
-				->get();
-		*/
-		
-		$tipos =  tipo_institucion::lists('descripcion', 'id')
-		->get();
-		
-
-  
-    
+	   $tipos = \DB::table('tipo_institucions')->lists('descripcion', 'id');
 
 					
    		Session::put('tipos', $tipos);
@@ -62,11 +50,20 @@ public function index()
         Session::put('usuario', $usuario);
 
         return view('usuario.registroAcademico');
-		
-		
   				  
-
 	}
+	
+	
+	
+	
+	/*public function poblarInstituciones(Resquest $request, $id)
+	{
+		if($request->ajax()){
+			return response()->json()
+		}
+		
+	}*/
+	
 
 
 }
