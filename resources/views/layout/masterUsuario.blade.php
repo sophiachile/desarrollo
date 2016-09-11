@@ -57,6 +57,8 @@ $tipos = Session::get('tipos');
     <section class="content">
 
         @yield('content')
+        {!!  Html::script('js/jquery-2.2.3.min.js') !!}
+        {!!  Html::script('js/dropdown.js') !!}
 
     </section>
     <!-- /.content -->

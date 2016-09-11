@@ -23,7 +23,7 @@ Route::get('crearUsuarios', 'UsuarioController@crearUsuarios');
 Route::get('profile', 'UsuarioController@profile');
 
 
-
+Route::get('instituciones/{id}','registroAcademicoController@getInstituciones');
 
 
 

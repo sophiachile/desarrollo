@@ -10,6 +10,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use Session;
 use Redirect;
+use Sophia\institucion;
+use Sophia\tipo_institucion;
 
 
 class registroAcademicoController extends Controller
@@ -51,6 +53,14 @@ public function index()
 
         return view('usuario.registroAcademico');
   				  
+	}
+	
+	public function getInstituciones(Request $request, $id){
+		if($request->ajax()){
+			$instituciones = institucion::instituciones($id);
+			return response()->json($instituciones);
+		}
+		return "Ocurrió un error inesperado.";
 	}
 	
 	
