@@ -29,10 +29,10 @@ $tipos = Session::get('tipos');
   					<div class="form-group" style=" width:350px;">
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
-		<!--{!! Form::select('tipo',(['0' => 'Seleccione el tipo de Institucion'] + $tipos), null,['id'=>'tipo']) !!} -->
+		
         
         {!! Form::select('tipo',$tipos,null,['id'=>'tipo']) !!}
-        {!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
+        
         
                              
                             
@@ -43,14 +43,7 @@ $tipos = Session::get('tipos');
  					 <div class="form-group" style=" width:350px;">
     					<label >Seleccione Institucion</label>
     						<div > 
-   								<select name="select-nomInstitucion" class="form-control" >
- 								 <option>1</option>
-         					 	<option>2</option>
-					 			 <option>3</option>
-					 			 <option>4</option>
-							     <option>5</option>
-								</select>
-					  		</div>
+   								{!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
   					</div>
   
     				<div class="form-group" style="width:350px;">
