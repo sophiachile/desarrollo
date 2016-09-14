@@ -26,7 +26,7 @@ $tipos = Session::get('tipos');
                    </p>
                    <form role="form">
                    
-  					<div class="form-group" style=" width:250px;">
+  					<div class="form-group" >
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
 		{!! Form::select('tipoInstitucion', array_merge(array('0' => 'Seleccione tipo de institucion') + $tipos), null,['id'=>'tipoInstitucion']) !!}
@@ -40,14 +40,14 @@ $tipos = Session::get('tipos');
                              </div>
  					 </div>
   
- 					 <div class="form-group" style=" width:350px;">
+ 					 <div class="form-group" >
     					<label >Seleccione Institucion</label>
     						<div > 
                 {!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
    							
   					</div>
   
-    				<div class="form-group" style="width:350px;">
+    				<div class="form-group" >
    					 <label >Seleccione su Carrera</label>
    				     <br/>
   					  <div > 
@@ -56,7 +56,7 @@ $tipos = Session::get('tipos');
  					 </div>
   
 
- 					 <div class="form-group" style=" width:600px;">
+ 					 <div class="form-group" ">
    					 <label >Seleccione los ramos de su carrera que decea agregar a su perfil</label>
        					 <div>
 					  		<div class="list-group">

@@ -25,6 +25,7 @@ Route::get('profile', 'UsuarioController@profile');
 
 Route::get('instituciones/{id}','registroAcademicoController@getInstituciones');
 Route::get('idCarreras/{id}','registroAcademicoController@getInstitucionCarrera');
+Route::get('carreras/{id}','registroAcademicoController@getCarreras');
 
 
 

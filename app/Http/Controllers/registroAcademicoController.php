@@ -12,6 +12,8 @@ use Session;
 use Redirect;
 use Sophia\institucion;
 use Sophia\tipo_institucion;
+use Sophia\institucion_carrera;
+use Sophia\carrera;
 
 
 class registroAcademicoController extends Controller
@@ -70,6 +72,14 @@ public function index()
         if($request->ajax()){
             $carreras = institucion_carrera::idCarreras($id);
             return response()->json($carreras);
+        }
+    }
+
+
+        public function getCarreras(Request $request, $id){
+        if($request->ajax()){
+            $carrera = carrera::carreras($id);
+            return response()->json($carrera);
         }
     }
 	

@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class carrera extends Model
 {
-        protected $connection = 'mysql';
+    protected $table = 'carreras';
+
+    protected $fillable = ['id','nombre_carrera'];
+
+	public static function carreras($id){
+	return carrera::where('id','=',$id)
+	->get();
+	}
 }
