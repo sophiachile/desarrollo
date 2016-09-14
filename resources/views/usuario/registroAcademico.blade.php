@@ -26,12 +26,12 @@ $tipos = Session::get('tipos');
                    </p>
                    <form role="form">
                    
-  					<div class="form-group" style=" width:350px;">
+  					<div class="form-group" style=" width:250px;">
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
-		
+		{!! Form::select('tipoInstitucion', array_merge(array('0' => 'Seleccione tipo de institucion') + $tipos), null,['id'=>'tipoInstitucion']) !!}
         
-        {!! Form::select('tipo',$tipos,null,['id'=>'tipo']) !!}
+        
         
         
                              
@@ -43,20 +43,15 @@ $tipos = Session::get('tipos');
  					 <div class="form-group" style=" width:350px;">
     					<label >Seleccione Institucion</label>
     						<div > 
-   								{!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
+                {!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
+   							
   					</div>
   
     				<div class="form-group" style="width:350px;">
    					 <label >Seleccione su Carrera</label>
    				     <br/>
   					  <div > 
- 						<select name="select-nomCarrera" class="form-control" >
- 						 <option>1</option>
-     			     	<option>2</option>
- 			 			<option>3</option>
- 						 <option>4</option>
-		   			    <option>5</option>
-						</select>
+ 						{!! Form::select('carrera',['placeholder'=>'Selecciona'],null,['id'=>'carrera']) !!}
   						</div>
  					 </div>
   

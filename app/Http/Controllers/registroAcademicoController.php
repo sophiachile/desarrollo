@@ -54,14 +54,24 @@ public function index()
         return view('usuario.registroAcademico');
   				  
 	}
+
+
+
+	
 	
 	public function getInstituciones(Request $request, $id){
-		if($request->ajax()){
-			$instituciones = institucion::instituciones($id);
-			return response()->json($instituciones);
-		}
-		return "Ocurrió un error inesperado.";
-	}
+        if($request->ajax()){
+            $instituciones = institucion::instituciones($id);
+            return response()->json($instituciones);
+        }
+    }
+
+    public function getInstitucionCarrera(Request $request, $id){
+        if($request->ajax()){
+            $carreras = institucion_carrera::idCarreras($id);
+            return response()->json($carreras);
+        }
+    }
 	
 	
 	
