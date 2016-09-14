@@ -29,33 +29,29 @@ $tipos = Session::get('tipos');
   					<div class="form-group" >
     					<label >Seleccione tipo de Institucion</label>
  	 						<div > 
-		{!! Form::select('tipoInstitucion', array_merge(array('0' => 'Seleccione tipo de institucion') + $tipos), null,['id'=>'tipoInstitucion']) !!}
-        
-        
-        
-        
-                             
+	             	{!! Form::select('tipoInstitucion', array_merge(array('0' => 'Seleccione tipo de institucion') + $tipos), null,['id'=>'tipoInstitucion','class' => 'form-control']) !!}
+
                             
-                            
-                             </div>
+               </div>
  					 </div>
   
  					 <div class="form-group" >
     					<label >Seleccione Institucion</label>
     						<div > 
-                {!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion']) !!}
+                {!! Form::select('institucion',['placeholder'=>'Selecciona'],null,['id'=>'institucion','class' => 'form-control']) !!}
    							
-  					</div>
+  				    	</div>
+            </div>
   
     				<div class="form-group" >
    					 <label >Seleccione su Carrera</label>
    				     <br/>
   					  <div > 
- 						{!! Form::select('carrera',['placeholder'=>'Selecciona'],null,['id'=>'carrera']) !!}
+ 						{!! Form::select('carrera',['placeholder'=>'Selecciona'],null,['id'=>'carrera','class' => 'form-control']) !!}
   						</div>
  					 </div>
   
-
+            <br/>
  					 <div class="form-group" ">
    					 <label >Seleccione los ramos de su carrera que decea agregar a su perfil</label>
        					 <div>
