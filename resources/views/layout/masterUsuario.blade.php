@@ -3,70 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="_token" content="{{ csrf_token() }}">
-  <title>Sophia | La red de Estudiantes</title>
+  <title>@yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="{{asset('asset/bootstrap/css/bootstrap.min.css')}}">
-  
-  
-  
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('asset/dist/css/AdminLTE.min.css')}}">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{asset('asset/dist/css/skins/_all-skins.min.css')}}">
-  <link rel="stylesheet" href="{{asset('asset/dist/css/master.css')}}">  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ URL::to('bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/skins/_all-skins.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/masterLogin.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/main.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/master.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('css/index_UsuarioMuro.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('/bower_components/jquery-file-upload/css/jquery.fileupload.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{ URL::to('css/messages.css') }}">
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="{{ URL::to('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('bower_components/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
+
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+    <script>
+        const siteUrl = "{{ URL::to('/') }}/";
+
+        <?php list(,,,$route) = explode("\\", Route::getCurrentRoute()->getActionName()); ?>
+        <?php list($controller, $action) = explode('@', $route); ?>
+
+        var controller = "{{ $controller }}";
+        var action = "{{ $action }}";
+
+        $(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                }
+            });
+        });
+    </script>
 </head>
 <?php
-$carreras = Session::get('carreras');
+if (Session::has('carrera')) {
+    $carrera = Session::get('carrera');
+}
+if (Session::has('perfil'))
+{
+  $perfil = Session::get('perfil')->id_perfil;
+}
+
 $ramos = Session::get('ramos');
-$usuario = Session::get('usuario');
-$tipos = Session::get('tipos');
+$usuario = Session::get('user');
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper" >
 
-@include('layout.panelHeader')
+//24-11-2016 CGG: nose entiende este if
+//24-11-2016 CGG: se llama al header de la pagina principal
+  @include('layout.panelHeader')
 
   <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
+@if(Session::has('carrera') && ($perfil=='2' ||$perfil=='3') )
+  @include('layout.panelUsuarioMuro')
+@elseif ($perfil=='2')
+  @include('layout.panelUsuarioMuroFirst')
+@elseif ($perfil=='1')
+  @include('layout.panelAdmin')
+@endif
 
-@include('layout.panelUsuarioMuro')
   <!-- =============================================== -->
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    
-
     <!-- Main content -->
-    <section class="content">
-
+    <section class="content" style="padding-top: 50px">
         @yield('content')
-        {!!  Html::script('js/jquery-2.2.3.min.js') !!}
-        {!!  Html::script('js/dropdown.js') !!}
-
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
- 
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -264,20 +296,30 @@ $tipos = Session::get('tipos');
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
+@section('scripts')
 <!-- jQuery 2.2.3 -->
-<script src="{{asset('asset/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="{{asset('asset/bootstrap/js/bootstrap.min.js')}}"></script>
-<!-- SlimScroll -->
-<script src="{{asset('asset/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
-<!-- FastClick -->
-<script src="{{asset('asset/plugins/fastclick/fastclick.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('asset/dist/js/app.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('asset/dist/js/demo.js')}}"></script>
+<!-- Scripts -->
+<script src=" {{ URL::to('dist/js/jquery-3.1.1.min.js')}}"></script>
+<script src=" {{ URL::to('plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+<script src=" {{ URL::to('bootstrap/js/bootstrap.min.js')}}"></script>
+<script src=" {{ URL::to('plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
+<script src=" {{ URL::to('plugins/fastclick/fastclick.js')}}"></script>
+<script src=" {{ URL::to('dist/js/app.min.js')}}"></script>
+<script src=" {{ URL::to('dist/js/demo.js')}}"></script>
+<script src=" {{ URL::to('js/app_new.js')}}"></script>
+<script src=" {{ URL::to('/bower_components/jquery-file-upload/js/vendor/jquery.ui.widget.js')}}"></script>
+<script src=" {{ URL::to('/bower_components/jquery-file-upload/js/jquery.fileupload.js')}}"></script>
+
+<!-- Datatables -->
+<script src=" {{ URL::to('/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src=" {{ URL::to('/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script src=" {{ URL::to('/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src=" {{ URL::to('/bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
 
 
+<script src=" {{ URL::to('/js/notifications.js')}}"></script>
+@show
+
+@stack('scripts')
 </body>
 </html>

@@ -5,19 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sophia | Administrador</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="{{asset('asset/bootstrap/css/bootstrap.min.css')}}">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('asset/dist/css/AdminLTE.min.css')}}">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{asset('asset/dist/css/skins/_all-skins.min.css')}}">
-  <link rel="stylesheet" href="{{asset('asset/dist/css/master.css')}}">  
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   <link rel="stylesheet"  href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ URL::to('css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/masterLogin.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,13 +25,29 @@
 <?php
 $carreras = Session::get('carreras');
 $ramos = Session::get('ramos');
-$usuario = Session::get('usuario');
+
+if (Session::has('user'))
+{
+
+  $usuario = Session::get('user');
+}
+else
+{
+  $usuario = $user;
+
+}
+if (Session::has('perfil'))
+{
+  $perfil = Session::get('perfil')->id_perfil;
+}
+
+
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
 
-@include('layout.masterHeader')
+@include('layout.panelHeader')
 
   <!-- =============================================== -->
 
@@ -50,10 +62,8 @@ $usuario = Session::get('usuario');
     
 
     <!-- Main content -->
-    <section class="content">
-
+    <section class="content" style="padding-top: 80px">
         @yield('content')
-
     </section>
     <!-- /.content -->
   </div>
@@ -259,16 +269,52 @@ $usuario = Session::get('usuario');
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="{{asset('asset/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="{{asset('asset/bootstrap/js/bootstrap.min.js')}}"></script>
-<!-- SlimScroll -->
-<script src="{{asset('asset/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
-<!-- FastClick -->
-<script src="{{asset('asset/plugins/fastclick/fastclick.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('asset/dist/js/app.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('asset/dist/js/demo.js')}}"></script>
+    <script src=" {{ URL::to('dist/js/jquery-3.1.1.min.js')}}"></script>
+    <script src=" {{ URL::to('plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+    <script src=" {{ URL::to('bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src=" {{ URL::to('plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
+    <script src=" {{ URL::to('plugins/fastclick/fastclick.js')}}"></script>
+    <script src=" {{ URL::to('dist/js/app.min.js')}}"></script>
+    <script src=" {{ URL::to('dist/js/demo.js')}}"></script>
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $('#usuarios').DataTable(
+                {
+                  "language": {
+                    "url": "{{ URL::to('/js/dataTables-es.json') }}"
+                  },
+                }
+        )
+     });
+    $(document).ready(function(){
+      $('#instituciones').DataTable(
+              {
+                "language": {
+                  "url": "{{ URL::to('/js/dataTables-es.json') }}"
+                },
+              }
+      )
+    });
+    $(document).ready(function(){
+      $('#docentes').DataTable(
+              {
+                "language": {
+                  "url": "{{ URL::to('/js/dataTables-es.json') }}"
+                },
+              }
+      )
+    });
+    $(document).ready(function(){
+      $('#carreras').DataTable(
+              {
+                "language": {
+                  "url": "{{ URL::to('/js/dataTables-es.json') }}"
+                },
+              }
+      )
+    });
+    </script>
 </body>
 </html>

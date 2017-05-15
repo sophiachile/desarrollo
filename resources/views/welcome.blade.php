@@ -1,70 +1,32 @@
-@extends('layout.master')
+@extends('layout.masterLogin')
+
+@section('title')
+Sophia | La Red de Estudiantes
+@endsection
+
 @section('content')
-<article class="container">
-		<div class="row">
-			<div class="col-sm-10">
-			  <div class="panel panel-default">
- 				 <div class="panel-body">
-				   <h1><strong> Bienvenido a Sophia</					strong></h1>
-                   <h4>Para poder finalizar su registro es necesario que porfavor complete los siguientes campos: </h4>
-                   <form role="form">
-  <div class="form-group">
-    <label for="tipo-insitucion">Seleccione tipo de Institucion</label>
- 	 	<div > 
-   			<select name="select-tipoInstitucion" class="form-control" >
- 			 <option>1</option>
-          	<option>2</option>
- 			 <option>3</option>
- 			 <option>4</option>
-		     <option>5</option>
-			</select>
-  		</div>
-  </div>
-  
-  <div class="form-group">
-    <label for="nom-institucion">Seleccione Institucion</label>
-    <div > 
-   			<select name="select-nomInstitucion" class="form-control" >
- 			 <option>1</option>
-          	<option>2</option>
- 			 <option>3</option>
- 			 <option>4</option>
-		     <option>5</option>
-			</select>
-  		</div>
-  </div>
-  
-    <div class="form-group">
-    <label for="nom-carrera">Seleccione su Carrera</label>
-    <div > 
-   			<select name="select-nomCarrera" class="form-control" >
- 			 <option>1</option>
-          	<option>2</option>
- 			 <option>3</option>
- 			 <option>4</option>
-		     <option>5</option>
-			</select>
-  		</div>
-  </div>
-  
-  <div class="form-group">
-    <label for="ramos-carrera">Seleccione los ramos de su carrera que decea agregar a su perfil</label>
-    	<div > 
-   		<select name="select-ramosCarrera" size="20" multiple="multiple"></select>
-         <button type="submit" class="btn btn-default">Agregar</button>
-  		</div>
-  </div>
-  
-  <button type="submit" class="btn btn-default">Enviar</button>
-					</form>
-		        </div>
-			  </div>
-			</div>
-		</div>
-</article>
+    @include('alerts.request')
 
+    <article class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4><i class="fa fa-dashboard"></i> <b>Sophia</b></h4>
+                <span><b>La Red de Estudiantes</b></span>
+                <hr/>
+                <p style="text-align: justify; font-family: 'Open Sans', sans-serif;">Bienvenido!. Esta es una plataforma donde
+                    podr&aacute;s subir y organizar el material de estudio de tu carrera, para que te
+                    sea m&aacute;s f&aacute;cil acceder a todo tu material académico. Tambi&eacute;n encontrar&aacute;s informaci&oacute;n
+                    y tips sobre la carrera que actualmente est&aacute;s estudiando o, si prefieres, sobre otras
+                    que sean de tu interes. &Uacute;nete a nuestra comunidad y comienza a usar nuestros servicios
+                    de forma absolutamente GRATUITA.</p>
+                <iframe width="100%" height="33%"
+                        src="https://www.youtube.com/embed/iHgd7aB4fH4">
+                </iframe>
+            </div>
 
-
-
-
-@stop()
+            <div class="col-sm-6">
+                @include('user.forms.signup')
+            </div>
+        </div>
+    </article>
+@endsection
