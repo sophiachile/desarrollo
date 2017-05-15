@@ -12,39 +12,28 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
-  	Model::unguard();
-          
+      Model::unguard();
+
       /* CGG:
        cuando se agrega una nueva class aca se debe correr el comando
-       composer dump-autoload 
+       composer dump-autoload
        o sino no toma las clases
       */
-      
-
-      /*
-      // Seeds Seguridad
-
-      //perfiles
-      $this->call('seeds_seguridad.PerfilsTableSeeder');
-      //usuario administrador
-      $this->call('seeds_seguridad.AdministradorTableSeeder');
-//usuarios random
-      $this->call('seeds_seguridad.UsuariosTableSeeder');
-      //modulos
-      $this->call('seeds_seguridad.ModulosTableSeeder');
-       */
-
 
       // Seeds Sistema
       $this->call('InstitucionsTableSeeder');
+      $this->call('SemestresTableSeeder');
       $this->call('CarrerasTableSeeder');
       $this->call('DocentesTableSeeder');
       $this->call('RegimenTableSeeder');
-
+      $this->call('PerfilsTableSeeder');
+      $this->call('UsuariosTableSeeder');
       $this->call('RamosTableSeeder');
       $this->call('RamoDocentesTableSeeder');
       $this->call('CarreraRamosTableSeeder');
       $this->call('InstitucionCarrerasTableSeeder');
       $this->call('UsuarioRamoDocentesTableSeeder');
+      $this->call('AdministradorTableSeeder');
+      $this->call('ModulosTableSeeder');
 	}
 }
