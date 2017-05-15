@@ -25,7 +25,6 @@ class UsuarioUpdateRequest extends Request
      */
     public function rules()
     {
-
         return [
             'nombre'    => 'required',
             'apellido'  => 'required',
